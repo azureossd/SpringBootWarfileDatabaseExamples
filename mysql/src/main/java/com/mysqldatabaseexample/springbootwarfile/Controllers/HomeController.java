@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController {
-    String message = "SpringBoot Warfile - MySQL example.";
+    String message = "SpringBoot .WAR file - MySQL";
 
     @GetMapping("/")
     public String index() {
