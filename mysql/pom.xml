@@ -60,7 +60,7 @@
           <subscriptionId>4388fa06-bf66-4497-82c2-991ba75ecb97</subscriptionId>
           <resourceGroup>ansalemo-rg</resourceGroup>
           <appName>ansalemo-linux-java-tomcat-mysql</appName>
-          <pricingTier>b1</pricingTier>
+          <pricingTier>f1</pricingTier>
           <region>eastus</region>
           <appServicePlanName>ansalemo-asp-testing</appServicePlanName>
           <appServicePlanResourceGroup>ansalemo-rg</appServicePlanResourceGroup>
