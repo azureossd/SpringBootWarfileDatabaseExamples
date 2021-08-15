@@ -4,7 +4,10 @@ import com.mysqldatabaseexample.springbootwarfile.Entities.TasksEntity;
 import com.mysqldatabaseexample.springbootwarfile.Repository.TasksRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -12,10 +15,9 @@ public class AddNewTask {
     @Autowired
     private TasksRepository tasks;
 
-    String message = "Work in progress";
-    
-    @GetMapping("/add_new_task")
-    public String addNewTask() {
-        return message;
+    @PostMapping("/add_new_task")
+    public ResponseEntity<TasksEntity> addNewTask(@RequestBody TasksEntity newTask) {
+        TasksEntity savedTask = tasks.save(newTask);
+        return new ResponseEntity<TasksEntity>(savedTask, HttpStatus.CREATED);
     }
 }
