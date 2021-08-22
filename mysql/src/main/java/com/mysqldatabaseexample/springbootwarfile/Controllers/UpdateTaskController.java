@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class UpdateTask {
+public class UpdateTaskController {
     @Autowired
     private TasksRepository tasks;
 
-    @PutMapping("/update_task/{id}")
+    @PutMapping("/api/mysql/update_task/{id}")
     public ResponseEntity<TasksEntity> updateTask(@PathVariable int id, @RequestBody TasksEntity updatedTask) {
         // Check if the task exists first before doing an update
         TasksEntity task = tasks.findById(id).orElseThrow(() -> new EntityNotFoundException("Task not found with ID: " + id));

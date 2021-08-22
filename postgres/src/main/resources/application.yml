@@ -1,1 +1,10 @@
-
+spring:
+  datasource:
+    driverClassName: com.postgres.jdbc.Driver
+    url: jdbc:postgres://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DATABASE}?useSSL=true&requireSSL=FALSE
+    username: ${POSTGRES_USER}@${POSTGRES_HOST}
+    password: ${POSTGRES_PASSWORD}
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true

@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class AddNewTask {
+public class AddNewTaskController {
     @Autowired
     private TasksRepository tasks;
 
-    @PostMapping("/add_new_task")
+    @PostMapping("/api/mysql/add_new_task")
     public ResponseEntity<TasksEntity> addNewTask(@RequestBody TasksEntity newTask) {
         TasksEntity savedTask = tasks.save(newTask);
         return new ResponseEntity<TasksEntity>(savedTask, HttpStatus.CREATED);
