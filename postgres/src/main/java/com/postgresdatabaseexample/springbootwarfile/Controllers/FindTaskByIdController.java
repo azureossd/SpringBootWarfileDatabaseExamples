@@ -15,7 +15,7 @@ public class FindTaskByIdController {
     @Autowired
     private TasksRepository tasks;
 
-    @GetMapping("/api/postgres/find/{id}")
+    @GetMapping("/api/postgres/task/find/{id}")
     public TasksEntity findTaskById(@PathVariable int id) {
         return tasks.findById(id).orElseThrow(() -> new EntityNotFoundException("Task not found with ID: " + id));
     }

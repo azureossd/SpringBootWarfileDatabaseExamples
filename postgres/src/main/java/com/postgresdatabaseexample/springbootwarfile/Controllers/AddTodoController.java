@@ -15,7 +15,7 @@ public class AddTodoController {
     @Autowired
     private TasksRepository tasks;
 
-    @PostMapping("/api/postgres/add_todo")
+    @PostMapping("/api/postgres/task/add")
     public ResponseEntity<TasksEntity> addTodo(@RequestBody TasksEntity newTodo) {
         TasksEntity newAddedTodo = tasks.save(newTodo);
         return new ResponseEntity<TasksEntity>(newAddedTodo, HttpStatus.CREATED);

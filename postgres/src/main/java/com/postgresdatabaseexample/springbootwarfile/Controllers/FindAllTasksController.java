@@ -12,7 +12,7 @@ public class FindAllTasksController {
     @Autowired
     private TasksRepository tasks;
     
-    @GetMapping("/api/postgres/find_all_tasks")
+    @GetMapping("/api/postgres/task/find")
     public Iterable<TasksEntity> findAllTasks() {
         return tasks.findAll();
     }
