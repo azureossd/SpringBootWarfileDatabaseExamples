@@ -15,7 +15,7 @@ public class AddNewTaskController {
     @Autowired
     private TasksRepository tasks;
 
-    @PostMapping("/api/mysql/add_new_task")
+    @PostMapping("/api/mysql/task/add")
     public ResponseEntity<TasksEntity> addNewTask(@RequestBody TasksEntity newTask) {
         TasksEntity savedTask = tasks.save(newTask);
         return new ResponseEntity<TasksEntity>(savedTask, HttpStatus.CREATED);

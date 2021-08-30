@@ -15,7 +15,7 @@ public class DeleteTaskController {
     @Autowired
     private TasksRepository tasks;
 
-    @DeleteMapping("/api/mysql/delete_task/{id}")
+    @DeleteMapping("/api/mysql/task/delete/{id}")
     public TasksEntity deleteTask(@PathVariable int id) {
         var findTask = tasks.findById(id).orElseThrow(() -> new EntityNotFoundException("Task not found with ID: " + id));
         tasks.deleteById(findTask.getId());
