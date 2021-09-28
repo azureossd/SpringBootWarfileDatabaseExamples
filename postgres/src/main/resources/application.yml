@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://${POSTGRES_HOST}.postgres.database.azure.com:${POSTGRES_PORT}/${POSTGRES_DATABASE}?useSSL=true&requireSSL=FALSE
+    url: jdbc:postgresql://${POSTGRES_HOST}.postgres.database.azure.com:5432/${POSTGRES_DATABASE_NAME}?useSSL=true&requireSSL=FALSE
     username: ${POSTGRES_USER}@${POSTGRES_HOST}
     password: ${POSTGRES_PASSWORD}
     driverClassName: org.postgresql.Driver
