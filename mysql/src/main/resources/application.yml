@@ -1,7 +1,7 @@
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT}/${MYSQL_DATABASE}?useSSL=true&requireSSL=FALSE
+    url: jdbc:mysql://${MYSQL_HOST}:3306/${MYSQL_DATABASE}?useSSL=true&requireSSL=FALSE
     username: ${MYSQL_USER}@${MYSQL_HOST}
     password: ${MYSQL_PASSWORD}
   jpa:
