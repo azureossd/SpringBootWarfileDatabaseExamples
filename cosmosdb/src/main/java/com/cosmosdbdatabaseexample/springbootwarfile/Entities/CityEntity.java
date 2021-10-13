@@ -8,8 +8,16 @@ public class CityEntity {
 
     public String city;
 
-    public void Cities() {}
+    public void Cities() {
+    }
+
     public void Cities(String city) {
         this.city = city;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Customer[id=%s, city='%s']", id, city);
+    }
+
 }

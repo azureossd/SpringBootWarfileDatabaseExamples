@@ -1,0 +1,7 @@
+spring:
+    data:
+        mongodb:
+            database: cities
+            # Note: where appname = ${COSMOS_HOST}, in this specific case - the Cosmos host is the same name as the application name (appname)
+            # Normally the Cosmos host would be different than the applicatio name, if desired
+            uri: mongodb://${COSMOS_HOST}:${COSMOS_PASSWORD}@${COSMOS_HOST}.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@${COSMOS_HOST}@
