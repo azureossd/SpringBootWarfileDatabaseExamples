@@ -10,11 +10,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class CityController {
+public class AddCityController {
     @Autowired
     private CityRepository cityRepository;
 
-    @GetMapping("/cities")
+    // This needs to be changed to a POST mapping - this is a placeholder
+    @GetMapping("/api/cosmosdb/city/add")
     public List<CityEntity> cities() {
         return cityRepository.findAll();
     }

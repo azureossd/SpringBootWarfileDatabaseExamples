@@ -7,7 +7,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class CityEntity {
     @Id
     public String id;
-
     public String city;
 
     public void Cities() {
@@ -20,7 +19,7 @@ public class CityEntity {
 
     @Override
     public String toString() {
-        return String.format("Customer[id=%s, city='%s']", id, city);
+        return String.format("City[id=%s, city='%s']", id, city);
     }
 
 }
