@@ -1,7 +1,9 @@
 package com.cosmosdbdatabaseexample.springbootwarfile.Entities;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document("Cities")
 public class CityEntity {
     @Id
     public String id;
@@ -11,7 +13,8 @@ public class CityEntity {
     public void Cities() {
     }
 
-    public void Cities(String city) {
+    public void Cities(String id, String city) {
+        this.id = id;
         this.city = city;
     }
 

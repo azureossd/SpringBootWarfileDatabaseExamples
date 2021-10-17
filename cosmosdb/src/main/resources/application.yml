@@ -3,5 +3,6 @@ spring:
         mongodb:
             database: cities
             # Note: where appname = ${COSMOS_HOST}, in this specific case - the Cosmos host is the same name as the application name (appname)
-            # Normally the Cosmos host would be different than the applicatio name, if desired
+            # Normally the Cosmos host would be different than the application name, if desired
+            # Reference: https://docs.microsoft.com/en-us/azure/developer/java/spring-framework/configure-spring-data-mongodb-with-cosmos-db#prerequisites
             uri: mongodb://${COSMOS_HOST}:${COSMOS_PASSWORD}@${COSMOS_HOST}.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@${COSMOS_HOST}@
