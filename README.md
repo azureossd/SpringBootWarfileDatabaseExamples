@@ -26,7 +26,7 @@ Create an [Azure Database for PostgreSQL](https://docs.microsoft.com/en-us/azure
  - `${POSTGRES_HOST}`: The host name of your Postgres server
  - `${POSTGRES_DATABASE_NAME}`: The name of your Postgres database. The `postgres` example uses 'springbootwarfiletasks'. Refer to the `postgres/database` folder.
  - `${POSTGRES_USER}`: The Postgres username
- - `${POSTGRESL_PASSWORD}`: Your Postgres password
+ - `${POSTGRES_PASSWORD}`: Your Postgres password
 
 - Routes
    - `/` - Root path
