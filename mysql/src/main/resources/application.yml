@@ -2,7 +2,7 @@ spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://${MYSQL_HOST}.mysql.database.azure.com:3306/${MYSQL_DATABASE}?useSSL=true&requireSSL=FALSE
-    username: ${MYSQL_USER}@${MYSQL_HOST}
+    username: ${MYSQL_USER}
     password: ${MYSQL_PASSWORD}
   jpa:
     hibernate.ddl-auto: update

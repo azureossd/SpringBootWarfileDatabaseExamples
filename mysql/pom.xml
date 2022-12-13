@@ -48,25 +48,26 @@
       <groupId>org.springframework.boot</groupId>  
       <artifactId>spring-boot-starter-validation</artifactId> 
     </dependency> 
+    
   </dependencies>  
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>com.microsoft.azure</groupId>
-        <artifactId>azure-webapp-maven-plugin</artifactId>
-        <version>2.2.0</version>
+  <build> 
+    <plugins> 
+      <plugin> 
+        <groupId>com.microsoft.azure</groupId>  
+        <artifactId>azure-webapp-maven-plugin</artifactId>  
+        <version>2.2.0</version>  
         <configuration>
           <schemaVersion>v2</schemaVersion>
           <subscriptionId>4388fa06-bf66-4497-82c2-991ba75ecb97</subscriptionId>
           <resourceGroup>ansalemo-rg</resourceGroup>
-          <appName>ansalemo-tomcat-warfile-test</appName>
-          <pricingTier>P1v2</pricingTier>
+          <appName>ansalemo-mysql-war</appName>
+          <pricingTier>B1</pricingTier>
           <region>eastus</region>
-          <appServicePlanName>ansalemo-asp-testing</appServicePlanName>
+          <appServicePlanName>ansalemo-asp</appServicePlanName>
           <appServicePlanResourceGroup>ansalemo-rg</appServicePlanResourceGroup>
           <runtime>
             <os>Linux</os>
-            <javaVersion>Java 8</javaVersion>
+            <javaVersion>Java 11</javaVersion>
             <webContainer>Tomcat 9.0</webContainer>
           </runtime>
           <deployment>
@@ -80,7 +81,7 @@
             </resources>
           </deployment>
         </configuration>
-      </plugin>
-    </plugins>
-  </build>
+      </plugin> 
+    </plugins> 
+  </build> 
 </project>
